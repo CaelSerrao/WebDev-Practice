@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link href="/Users/mariaserrao/serrao website/static/custom.css", rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        /* Set the border color */
+         
+        .custom-toggler.navbar-toggler {
+      border-color: black;
+        }
+        /* Setting the stroke to green using rgb values (0, 128, 0) */
+         
+        .custom-toggler .navbar-toggler-icon {
+            background-image: url(
+        "data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 0, 0, 0.55)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+        }
+        .navbar-custom {
+          background-color: rgb(243, 220, 187);
+        }
+        .navbar-custom .navbar-brand,
+        .navbar-custom .navbar-text {
+          color: white;
+        }
+        .collapse {
+          background-color: rgb(255,232,199);
+        }
+       </style>
+    <div class="collapse " id="navbarHeader">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-8 col-md-7 py-4">
+              <h4 class="text-dark">About</h4>
+              <p class="text-dark">About</p>
+            </div>
+            <div class="col-sm-4 offset-md-1 py-4">
+              <h4 class="text-dark">Contact</h4>
+              <ul class="list-unstyled">
+                <li><a href="/contact_us" class="text-dark">Contact us</a></li>
+                <li><a href="#" class="text-dark">Like on Facebook</a></li>
+                <li><a href="#" class="text-dark">Email me</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+    </div>
+       <div class="navbar navbar-custom">
+         <div class="container">
+           <a href="/" class="navbar-brand d-flex align-items-center">
+             <image src="{{ url_for('static', filename='images/logo-removebg-preview.png')}}" height="80" width="420">
+           </a>
+           <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+             <span class="navbar-toggler-icon"></span>
+           </button>
+        </div>
+      </div>
+    
+    {% block head %} {% endblock %}
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" ></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+</head>
+<body>
+    {% block body %} {% endblock %}
+    <footer class="text-muted py-5">
+        <div class="container">
+          <p class="float-end mb-1">
+            <a href="#">Back to top</a>
+          </p>
+          <p class="mb-1">Album example is &copy; Bootstrap, but please download and customize it for yourself!</p>
+          <p class="mb-0">New to Bootstrap? <a href="/">Visit the homepage</a> or read our <a href="/docs/5.3/getting-started/introduction/">getting started guide</a>.</p>
+        </div>
+</body>
